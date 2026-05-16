@@ -8,7 +8,17 @@ import { cn } from "@/lib/utils";
 
 export default function BookingBot() {
   const [isOpen, setIsOpen] = useState(false);
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat();
+  const [input, setInput] = useState("");
+  const { messages, sendMessage, status } = useChat();
+
+  const isLoading = status === "streaming" || status === "submitted";
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+    sendMessage({ parts: [{ type: "text", text: input }] });
+    setInput("");
+  };
 
   return (
     <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-4">
@@ -68,7 +78,9 @@ export default function BookingBot() {
                         : "bg-white text-brand-ink border border-brand-nude/20 rounded-tl-none"
                     )}
                   >
-                    {m.content}
+                    {m.parts.map((part, i) => (
+                      part.type === 'text' ? <span key={i}>{part.text}</span> : null
+                    ))}
                   </div>
                 </motion.div>
               ))}
@@ -90,7 +102,7 @@ export default function BookingBot() {
               <div className="relative flex items-center">
                 <input
                   value={input}
-                  onChange={handleInputChange}
+                  onChange={(e) => setInput(e.target.value)}
                   placeholder="Escribe tu mensaje..."
                   className="w-full bg-white/50 border border-brand-nude/40 rounded-full px-6 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-brand-nude transition-all placeholder:text-brand-ink/30"
                 />
