@@ -21,11 +21,25 @@ export default function Hero() {
         />
       </div>
 
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center px-4 flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="mb-8 w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border border-brand-ink/10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] relative"
+        >
+          <img 
+            src="/images/profile.png" 
+            alt="YumeTattoos Artist"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-brand-champagne/10 mix-blend-overlay"></div>
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="font-serif text-6xl md:text-8xl text-brand-ink mb-6 tracking-tight"
         >
           YUME

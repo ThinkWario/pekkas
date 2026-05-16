@@ -10,31 +10,31 @@ const projects = [
     id: 1,
     title: "El brillo natural de una tarde de verano.",
     cat: "Permanente",
-    img: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce38?auto=format&fit=crop&q=80&w=800",
+    img: "/images/pekkas_1.png",
   },
   {
     id: 2,
     title: "Sutil. Sin fisuras. Simplemente tú.",
     cat: "Semi-Permanente",
-    img: "https://images.unsplash.com/photo-1522337360788-8f667779775d?auto=format&fit=crop&q=80&w=800",
+    img: "/images/pekkas_2.png",
   },
   {
     id: 3,
     title: "Naturaleza, refinada.",
     cat: "Permanente",
-    img: "https://images.unsplash.com/photo-1509909604465-6a9967724701?auto=format&fit=crop&q=80&w=800",
+    img: "/images/pekkas_3.png",
   },
   {
     id: 4,
     title: "La confianza de un beso natural del sol.",
     cat: "Semi-Permanente",
-    img: "https://images.unsplash.com/photo-1595959176188-67475797999a?auto=format&fit=crop&q=80&w=800",
+    img: "/images/pekkas_1.png",
   },
   {
     id: 5,
     title: "Un realce delicado, un sentimiento atemporal.",
     cat: "Permanente",
-    img: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&q=80&w=800",
+    img: "/images/pekkas_2.png",
   },
 ];
 

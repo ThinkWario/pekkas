@@ -3,6 +3,7 @@ import Philosophy from "@/components/Philosophy";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import BookingBot from "@/components/BookingBot";
+import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 
 export default function Home() {
   return (
@@ -11,6 +12,23 @@ export default function Home() {
       <Philosophy />
       <Services />
       <Portfolio />
+
+      {/* Before & After Section */}
+      <section className="py-24 px-6 bg-brand-champagne relative z-10">
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <span className="text-xs uppercase tracking-[0.3em] text-brand-ink/50 font-sans font-medium">La Transformación</span>
+          <h2 className="font-serif text-4xl md:text-5xl text-brand-ink mt-4">Antes y Después</h2>
+          <p className="mt-4 text-brand-ink/70 font-sans max-w-xl mx-auto">Un realce sutil que celebra y respeta tu belleza natural.</p>
+        </div>
+        <div className="max-w-2xl mx-auto">
+          <BeforeAfterSlider 
+            beforeImage="/images/pekkas_1_before.png" 
+            afterImage="/images/pekkas_1.png" 
+            labelBefore="Antes" 
+            labelAfter="Después" 
+          />
+        </div>
+      </section>
 
       {/* Footer / Contact CTA */}
       <section className="py-24 px-6 text-center bg-brand-ink text-brand-champagne">

@@ -44,14 +44,14 @@ export default function Services() {
     {
       title: "El Camino Eterno",
       description: "Diseñado para quienes buscan un resplandor sun-kissed de por vida. Pigmento de alta precisión que imita las pecas naturales con una elegancia eterna.",
-      beforeImage: "https://images.unsplash.com/photo-1595959176188-67475797999a?auto=format&fit=crop&q=80&w=800",
-      afterImage: "https://images.unsplash.com/photo-1595959176188-67475797999a?auto=format&fit=crop&q=80&w=800&sat=-50",
+      beforeImage: "/images/pekkas_1_before.png",
+      afterImage: "/images/pekkas_1.png",
     },
     {
       title: "El Camino Evolutivo",
       description: "Una belleza delicada y en evolución. Perfecto para quienes desean un look natural que se desvanece con gracia, permitiendo ajustes estacionales.",
-      beforeImage: "https://images.unsplash.com/photo-1509909604465-6a9967724701?auto=format&fit=crop&q=80&w=800",
-      afterImage: "https://images.unsplash.com/photo-1509909604465-6a9967724701?auto=format&fit=crop&q=80&w=800&sat=-50",
+      beforeImage: "/images/pekkas_2_before.png",
+      afterImage: "/images/pekkas_2.png",
     },
   ];
 
